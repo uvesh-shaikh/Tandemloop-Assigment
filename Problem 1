@@ -1,0 +1,29 @@
+class Calculator:
+    def _init_(self, a, b, operation):
+        self.a = float(a)
+        self.b = float(b)
+        self.operation = operation.lower()
+
+    def calculate(self):
+        if self.operation == 'addition':
+            return self.a + self.b
+        elif self.operation == 'subtraction':
+            return self.a - self.b
+        elif self.operation == 'multiplication':
+            return self.a * self.b
+        elif self.operation == 'division':
+            if self.b != 0:
+                return self.a / self.b
+            else:
+                return "Error: Division by zero"
+        else:
+            return "Invalid Operation"
+
+
+if __name__ == "_main_":
+    a_input = 10
+    b_input = 5
+    op_input = "addition"
+    calc = Calculator(a_input, b_input, op_input)
+    result = calc.calculate()
+    print(f"Result of {op_input}: {result}")

@@ -1,0 +1,18 @@
+def count_multiples(number_list):
+
+    divisors = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    output_dict = {}
+
+    for divisor in divisors:
+        count = 0
+        for num in number_list:
+            if num % divisor == 0:
+                count += 1
+        output_dict[divisor] = count
+    
+    return output_dict
+
+if __name__ == "_main_":
+    input_list = [1, 2, 8, 9, 12, 46, 76, 82, 15, 20, 30]
+    result = count_multiples(input_list)
+    print(result)

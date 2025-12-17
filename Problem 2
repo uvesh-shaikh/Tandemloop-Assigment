@@ -1,0 +1,12 @@
+def generate_odd_series(a):
+    result = []
+    for i in range(1, a + 1):
+        odd_num = 2 * i - 1
+        result.append(str(odd_num))
+    
+    print(", ".join(result))
+
+if __name__ == "_main_":
+    a = 4
+    print(f"Input a = {a}, then output : ", end="")
+    generate_odd_series(a)
